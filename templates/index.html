@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Topper Form and Table</title>
+    <style>
+        /* Global styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        /* Form styling */
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 60%;
+            margin: 0 auto 40px auto;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+            color: #444;
+        }
+
+        input[type="text"] {
+            width: 80%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+        }
+
+        input[type="submit"] {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+    </style>
+</head>
+<body>
+    <form method="post">
+        <h2>SEE THE TOPPER</h2>
+        <label for="dept">ENTER DEPARTMENT</label>
+        <input type="text" id="dept" name="dept" placeholder="english language & literature">
+        <br><br>
+
+        <label for="exam-year">ENTER EXAM YEAR</label>
+        <input type="text" id="exam-year" name="year" placeholder="2023">
+        <br><br>
+
+        <label for="semester">ENTER SEMESTER</label>
+        <input type="text" id="semester" name="semester" placeholder="4">
+        <br><br>
+
+        <label for="batch">ENTER BATCH</label>
+        <input type="text" id="batch" name="batch" placeholder="batch (2024) regular">
+        <br><br>
+
+        <label for="subject">ENTER SUBJECT</label>
+        <input type="text" id="subject" name="subject" placeholder="political science (minor)">
+        <br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+    {% if result %}
+  <p>Topper: {{ result }}</p>
+  {% endif %}
+
+</body>
+</html>
