@@ -75,17 +75,18 @@ def get_result_page(dept, year, semester, batch, subject):
     display_button.click()
     wait = WebDriverWait(driver, 10)
     wait.until(EC.presence_of_element_located((By.ID, "course")))
-    
+    time.sleep(1)
     html = driver.page_source
     return html
 
 def find_topper(dept, year, semester, batch, subject):
 
-   soup = BeautifulSoup(get_result_page(dept, year, semester, batch, subject), "html.parser")
-   data = {}
+   html = get_result_page(dept, year, semester, batch, subject)
 
-   div = soup.find(class_="col-md-12")
-   table = div.find("table")
+   soup = BeautifulSoup(html, "html.parser")
+   data = {}
+   
+   table = soup.select_one("table.table.table-bordered.table-striped")
    body = table.find("tbody")
    rows = body.find_all("tr")
 
@@ -94,19 +95,32 @@ def find_topper(dept, year, semester, batch, subject):
       if len(headers) < 6:
        continue
       
-      roll_no = headers[1].text + '-'
+      roll_no = headers[1].text + ' - '
       name = headers[2].text
       data[roll_no+name] = headers[5].text
 
-   marks = list(data.values())
+   marks = set(data.values())
+   marks = list(marks)
    marks.sort()
-   val = marks[len(marks)-1]
+   vals = [marks[len(marks)-1], marks[len(marks)-2], marks[len(marks)-3]]
 
-   highest = [k for k, v in data.items() if v == val]
+   first = [k for k, v in data.items() if v == vals[0]]
+   second = [k for k, v in data.items() if v == vals[1]]
+   third = [k for k, v in data.items() if v == vals[2]]
+
    print(f"Highest marks in {subject}: ")
 
-   for name in highest:
+   print("FIRST: ")
+   for name in first:
+      print(name + " = " + data[name])
+
+      print("SECOND: ")
+   for name in second:
       print(name + " = " + data[name])
    
-   return highest
+   print("THIRD: ")
+   for name in third:
+      print(name + " = " + data[name])
+
+   return [first, second, third], [vals[0], vals[1], vals[2]] 
    

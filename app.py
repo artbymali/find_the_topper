@@ -5,7 +5,8 @@ app = Flask(__name__)
 
 @app.route("/", methods = ["GET", "POST"])
 def get_data():
-    result = None
+    students = None
+    marks = None
 
     if request.method == "POST":
         dept = request.form.get("dept").upper()
@@ -14,8 +15,8 @@ def get_data():
         batch = request.form.get("batch").upper()
         subject = request.form.get("subject").upper()
 
-        result = find_topper(dept, year, semester, batch, subject)
-    return render_template("index.html", result = result)
+        students, marks = find_topper(dept, year, semester, batch, subject)
+    return render_template("index.html", students = students, marks = marks)
 
 if __name__ == "__main__":
     app.run(debug=True)
