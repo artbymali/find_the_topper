@@ -137,6 +137,7 @@ width: 240px;
   form input[type="submit"]:hover {
       background-color: #055e0a;
     }
+    
   
   /* === TABLE === */
   table {
@@ -222,6 +223,9 @@ width: 240px;
     h2{
         margin-left: 80px;
     }
+    form input[type="submit"] {
+        width: 30rem;
+    }
   }
 
   
@@ -257,6 +261,9 @@ width: 240px;
     h2{
         margin-left: 70px;
     }   
+    form input[type="submit"] {
+        width: 23rem;
+    }
   
     nav {
       height: 50px;
@@ -277,6 +284,9 @@ width: 240px;
     width: 160px;
     margin-top: -50px;
     
+}
+form input[type="submit"] {
+    width: 16rem;
 }
 h2{
     margin-left: 40px;
