@@ -3,120 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Topper Form and Table</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f2f2f2;
-            padding: 20px;
-            text-align: center;
-        }
+    <link rel="stylesheet" href="/find_the_topper/static/design.css">
+        <title>Topper Form and Table</title>
 
-        h2 {
-            color: #333;
-        }
 
-        form {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 12px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            width: 60%;
-            margin: 0 auto 40px auto;
-        }
-
-        label {
-            display: block;
-            margin-top: 15px;
-            font-weight: bold;
-            color: #444;
-        }
-
-        input[type="text"] {
-            width: 80%;
-            padding: 10px;
-            margin-top: 5px;
-            border: 1px solid #ccc;
-            border-radius: 6px;
-            font-size: 14px;
-        }
-
-        input[type="submit"] {
-            margin-top: 20px;
-            padding: 10px 20px;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            border-radius: 6px;
-            cursor: pointer;
-            font-size: 16px;
-        }
-
-        input[type="submit"]:hover {
-            background-color: #45a049;
-        }
-
-        table {
-            width: 80%;
-            margin: 0 auto;
-            border-collapse: collapse;
-            background-color: #fff;
-            margin-top: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-            overflow: hidden;
-        }
-
-        th, td {
-            padding: 12px 15px;
-            border-bottom: 1px solid #ddd;
-            text-align: center;
-            font-size: 16px;
-            color: #333;
-        }
-
-        th {
-            background-color: #4CAF50;
-            color: white;
-            font-weight: bold;
-            text-transform: uppercase;
-        }
-
-        tr:nth-child(even) {
-            background-color: #f9f9f9;
-        }
-
-        tr:hover {
-            background-color: #f1f1f1;
-        }
-
-    </style>
     </head>
 <body>
-    <form method="post">
+    
+    
+    <nav>
+        <span>
+            <img src="../Images/logo.png" alt="" class="logo">
+        </span>
+        
+        <h1 class="Created">Created by Shahzad Nizamani - 2K24/CSM/137</h1>
+    </nav>
+    <div class="container">
+
+        <div class="card">
+          <h1>📋 Instructions</h1>
+    
+          <div class="instruction">
+            <h3>Official Marksheet Required  </h3>
+            <p>This form will only work if the marksheet has been uploaded on the official <strong>University of Sindh</strong> website.</p>
+          </div>
+    
+          <div class="instruction">
+            <h3> Enter Accurate Details</h3>
+            <p>Please ensure you enter the <strong>exact names</strong> of your department, batch, and subject. Incorrect spellings or formatting may lead to no results.</p>
+          </div>
+    
+          <div class="instruction">
+            <h3> Need Help?</h3>
+            <p>If your department is not working or data isn’t available, feel free to <a href="mailto:your_email@example.com">email me</a> with the details. I’ll assist you in resolving the issue.</p>
+          </div>
+        </div>
+      </div>
+    <form method="post" onsubmit="return validateForm()">
+
         <h2>SEE THE TOPPER</h2>
-        <label for="dept">ENTER DEPARTMENT</label>
-        <input type="text" id="dept" name="dept" placeholder="english language & literature">
-        <br><br>
-
-        <label for="exam-year">ENTER EXAM YEAR</label>
-        <input type="text" id="exam-year" name="year" placeholder="2023">
-        <br><br>
-
-        <label for="semester">ENTER SEMESTER</label>
-        <input type="text" id="semester" name="semester" placeholder="4">
-        <br><br>
-
-        <label for="batch">ENTER BATCH</label>
-        <input type="text" id="batch" name="batch" placeholder="batch (2024) regular">
-        <br><br>
-
-        <label for="subject">ENTER SUBJECT</label>
-        <input type="text" id="subject" name="subject" placeholder="political science (minor)">
-        <br><br>
-
+        <div class="Inputs">
+              <label for="dept">ENTER DEPARTMENT</label>
+              <input type="text" id="dept" name="dept" placeholder="English Language & Literature" required>
+          
+              <label for="exam-year">ENTER EXAM YEAR</label>
+              <input type="text" id="exam-year" name="year" placeholder="2023" required pattern="\d{4}" title="Enter a valid 4-digit year">
+          
+              <label for="semester">ENTER SEMESTER</label>
+              <input type="number" id="semester" name="semester" placeholder="4" required>
+          
+              <label for="batch">ENTER BATCH</label>
+              <input type="text" id="batch" name="batch" placeholder="Batch (2024) Regular" required>
+          
+              <label for="subject">ENTER SUBJECT</label>
+              <input type="text" id="subject" name="subject" placeholder="Political Science (Minor)" required>
+          </div>
+          
         <input type="submit" value="Submit">
-    </form>
+      </form>
+      
 
     <table>
         
@@ -139,6 +84,6 @@
         </table>
         {% else %}
         {% endif %}
-
+ <script src="/find_the_topper/templates/index.js"></script>
 </body>
 </html>
