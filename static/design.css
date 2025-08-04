@@ -91,225 +91,98 @@ width: 240px;
   .instruction a:hover {
     text-decoration: underline;
   }
-  
-  /* === FORM === */
-  form {
-    background-color: #fff;
-    padding: 28px;
-    padding-top: 30px;
-    border-radius: 12px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    max-width: 600px;
-    margin: 40px auto;
-    text-align: left;
-  }
 
-  form label {
-    display: block;
-    margin-top: 5px;
-    font-weight: bold;
-    color: #4d4c4c;
-    font-size: 14px;
-  }
-  
-  form input[type="text"],
-  form input[type="number"] {
-    width: 100%;
-    padding: 10px;
-    margin-top: 15px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    font-size: 14px;
-  }
-  
-  form input[type="submit"] {
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 16px;
-    width: 34rem;
-  }
-  
-  form input[type="submit"]:hover {
-      background-color: #055e0a;
-    }
-    
-  
-  /* === TABLE === */
-  table {
-    width: 95%;
-    margin: 20px auto;
-    border-collapse: collapse;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    overflow: hidden;
-  }
-  
-  th, td {
-    padding: 12px 15px;
-    border-bottom: 1px solid #ddd;
+/* Form Styles */
+form {
+  max-width: 700px;
+  margin: 0 auto 3rem;
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+form h2 {
+  text-align: center;
+  color: #004080;
+  margin-bottom: 2rem;
+}
+
+.Inputs label {
+  display: block;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.Inputs input {
+  width: 100%;
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  transition: border 0.3s;
+}
+
+.Inputs input:focus {
+  border-color: #004080;
+}
+
+input[type="submit"] {
+  margin-top: 2rem;
+  width: 100%;
+  padding: 0.8rem;
+  background-color: #16b005;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+  background-color: #0db510;
+}
+
+/* Table Styles */
+table {
+  width: 80%;
+  margin: 2rem auto;
+  border-collapse: collapse;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+table th, table td {
+  border: 1px solid #ccc;
+  padding: 0.8rem;
+  text-align: left;
+}
+
+table th {
+  background-color: #004080;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+}
+
+table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
     text-align: center;
-    font-size: 16px;
-    color: #333;
-  }
-  
-  th {
-    background-color: #4CAF50;
-    color: white;
-    font-weight: bold;
-    text-transform: uppercase;
-  }
-  
-  tr:nth-child(even) {
-    background-color: #f9f9f9;
-  }
-  
-  tr:hover {
-    background-color: #f1f1f1;
-  }
-  
-  /* === FADE ANIMATION === */
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(10px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  @media (max-width:1000px) {
-    .Created{
-        font-size: 16px;
-        margin-top: -6.5rem;
-        margin-left: 10rem;
-    }
-
-    nav .logo{
-        width: 190px;
-        margin-top: -60px;
-    }
-
-    
-  }
-  /* === MEDIA QUERIES === */
-  @media (max-width: 768px) {
-    nav .logo {
-      padding-left: 10px;
-    }
-    .Created{
-        margin-top: -6rem;
-        margin-left: 10rem;
-        font-size: 13px;
-    }
-  
-    h1 {
-      font-size: 24px;
-    }
-  
-    .instruction h3 {
-      font-size: 18px;
-    }
-  
-    .instruction p {
-      font-size: 15px;
-    }
-    h2{
-        margin-left: 80px;
-    }
-    form input[type="submit"] {
-        width: 30rem;
-    }
   }
 
-  
-  @media (max-width: 550px) {
-    .card,
-    form {
-      padding: 15px;
-    }
-    .Created{
-        font-size: 12px;
-    }
-  nav .logo{
-    width: 170px;
-    margin-top: -50px;
-    margin-left: -20px;
+  .container, form, table {
+    width: 90%;
   }
-    h1 {
-      font-size: 20px;
-    }
-  
-    .instruction h3 {
-      font-size: 16px;
-    }
-  
-    .instruction p {
-      font-size: 14px;
-    }
-  
-    th, td {
-      font-size: 14px;
-      padding: 10px;
-    }
-    h2{
-        margin-left: 70px;
-    }   
-    form input[type="submit"] {
-        width: 23rem;
-    }
-  
-    nav {
-      height: 50px;
-    }
-  }
-    
-  @media (max-width: 400px) {
-    .card,
-    form {
-      padding: 15px;
-    }
-    .Created{
-        margin-left: 10rem;
-        font-size: 12px;
-        margin-top: -5.5rem;
-    }
-  nav .logo{
-    width: 160px;
-    margin-top: -50px;
-    
-}
-form input[type="submit"] {
-    width: 16rem;
-}
-h2{
-    margin-left: 40px;
-}
-h1 {
-    font-size: 20px;
-}
 
-.instruction h3 {
-    font-size: 16px;
-}
-  
-    .instruction p {
-      font-size: 14px;
-    }
-  
-    th, td {
-      font-size: 14px;
-      padding: 10px;
-    }
-  
-    nav {
-      height: 50px;
-    }
+  .Inputs input {
+    font-size: 1rem;
   }
-  
+}
