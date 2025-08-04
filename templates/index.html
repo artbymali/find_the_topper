@@ -3,7 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/find_the_topper/static/design.css">
+<!-- Correct CSS reference -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='design.css') }}">
+
+    <!-- Correct JS reference -->
+    <script src="{{ url_for('static', filename='index.js') }}"></script>
+
+    <!-- Correct image reference -->
+    <img src="{{ url_for('static', filename='Images/logo.png') }}" alt="Logo">
         <title>Topper Form and Table</title>
 
 

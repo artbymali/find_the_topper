@@ -20,7 +20,7 @@ def get_result_page(dept, year, semester, batch, subject):
       dept = "CENTRE FOR ENVIRONMENTAL SCIENCES"
       prog = "BS (ENVIRONMENTAL SCIENCES)"
 
-       
+     
     wait = WebDriverWait(driver, 10)
     wait.until(EC.presence_of_element_located(
     (By.XPATH, f"//select[@id='dept_id']/option[text()='{dept}']")
