@@ -41,36 +41,73 @@
           </div>
         </div>
       </div>
-    <form method="post" onsubmit="return validateForm()">
+<form method="post" onsubmit="return validateForm()">
 
-        <h2>SEE THE TOPPER</h2>
-        <div class="Inputs">
-              <label for="dept">ENTER DEPARTMENT</label>
-              <input type="text" id="dept" name="dept" placeholder="English Language & Literature" required>
-          
-              <label for="exam-year">ENTER EXAM YEAR</label>
-              <input type="text" id="exam-year" name="year" placeholder="2023" required pattern="\d{4}" title="Enter a valid 4-digit year">
-          
-              <label for="semester">ENTER SEMESTER</label>
-              <input type="number" id="semester" name="semester" placeholder="4" required>
-          
-              <label for="batch">ENTER BATCH</label>
-              <input type="text" id="batch" name="batch" placeholder="Batch (2024) Regular" required>
-          
-              <label for="subject">ENTER SUBJECT</label>
-              <input type="text" id="subject" name="subject" placeholder="Political Science (Minor)" required>
-          </div>
-          
-        <input type="submit" value="Submit">
-      </form>
-      
+    <h2>FIND THE TOPPER</h2>
+    <div class="Inputs">
+
+        <label for="dept">SELECT DEPARTMENT</label>
+        <select id="dept" name="dept" required>
+          <option value="">--Select Department--</option>
+          <option value="ABIDA TAHERANI SINDH DEVELOPMENT STUDIES CENTRE">ABIDA TAHERANI SINDH DEVELOPMENT STUDIES CENTRE</option>
+          <option value="ACCOUNTING AND FINANCE">ACCOUNTING AND FINANCE</option>
+          <option value="ANTHROPOLOGY & ARCHAEOLOGY">ANTHROPOLOGY & ARCHAEOLOGY</option>
+          <option value="APPLIED LINGUISTICS">APPLIED LINGUISTICS</option>
+          <option value="ARABIC">ARABIC</option>
+          <option value="AREA STUDY CENTRE FAR EAST AND SOUTH EAST ASIA">AREA STUDY CENTRE FAR EAST AND SOUTH EAST ASIA</option>
+          <option value="ART & DESIGN">ART & DESIGN</option>
+          <option value="ARTIFICIAL INTELLIGENCE">ARTIFICIAL INTELLIGENCE</option>
+          <option value="BANKING AND FINANCE">BANKING AND FINANCE</option>
+          <option value="BIOCHEMISTRY">BIOCHEMISTRY</option>
+          <option value="BIOTECHNOLOGY">BIOTECHNOLOGY</option>
+          <option value="BOTANY">BOTANY</option>
+          <option value="BUSINESS ADMINSTRATION">BUSINESS ADMINSTRATION</option>
+          <option value="CENTRE FOR  PHYSICAL EDUCATION  HEALTH & SPORTS SCIENCE">CENTRE FOR  PHYSICAL EDUCATION  HEALTH & SPORTS SCIENCE</option>
+          <option value=61>CENTRE FOR ENVIRONMENTAL SCIENCES</option><option value=78>CENTRE FOR MUSIC EDUCATION  INSTITUTE OF ART & DESIGN</option><option value=255>CENTRE FOR PURE & APPLIED GEOLOGY</option><option value=35>CENTRE FOR RURAL DEVELOPMENT COMMUNICATION</option><option value=12>CHEMISTRY</option><option value=256>COASTAL AND MARINE SCIENCES</option><option value=42>COMMERCE</option><option value=57>COMPARATIVE RELIGION & ISLAMIC CULTURE</option><option value=10>COMPUTER SCIENCE</option><option value=41>CRIMINOLOGY</option><option value=241>CURRICULM DEVELOPMENT AND SPECIAL EDUCATION</option><option value=260>DATA SCIENCE</option><option value=264>DISASTER MANAGEMENT</option><option value=239>DISTANCE CONTINUING AND COMPUTER EDUCATION</option><option value=254>DR. A.H.S. BUKHARI IICT</option><option value=11>DR. M.A. KAZI INSTITUTE OF CHEMISTRY</option><option value=238>EARLY CHILDHOOD AND ELEMENTARY EDUCATION</option><option value=280>EASTERN MEDICINE AND SURGERY</option><option value=1>ECONOMICS</option><option value=265>ECONOMICS AND FINANCE</option><option value=67>EDUCATION</option><option value=74>EDUCATION  SINDH UNIVERSITY LAAR CAMPUS @ BADIN</option><option value=236>EDUCATIONAL MANAGEMENT AND SUPERVISION</option><option value=15>ELECTRONICS</option><option value=250>ELECTRONICS (FET)</option><option value=45>ENGLISH</option><option value=267>ENGLISH LANGUAGE & LITERATURE</option><option value=301>ENGLISH LANGUAGE & LITERATURE (ELSA KAZI CAMPUS)</option><option value=257>ENGLISH LANGUAGE TEACHING</option><option value=277>FISHERIES AND AQUATIC SCIENCES</option><option value=261>FORENSIC ACCOUNTING & FRAUD EXAMINATION</option><option value=249>FORESTRY</option><option value=20>FRESHWATER BIOLOGY & FISHERIES</option><option value=29>GENDER STUDIES</option><option value=31>GENERAL HISTORY</option><option value=18>GENETIC ENGINEERING</option><option value=21>GEOGRAPHY</option><option value=22>GEOLOGY</option><option value=276>HISTORY</option><option value=8>INFORMATION TECHNOLOGY</option><option value=251>INFORMATION TECHNOLOGY (FET)</option><option value=6>INSTITUTE  OF BUSINESS ADMINISTRATION</option><option value=124>INSTITUTE FOR ADVANCED RESEARCH STUDIES IN CHEMICAL SCIENCES</option><option value=43>INSTITUTE OF ARTS & DESIGN</option><option value=59>INSTITUTE OF BIOCHEMISTRY</option><option value=17>INSTITUTE OF BIOTECHNOLOGY & GENETIC ENGINEERING</option><option value=7>INSTITUTE OF COMMERCE & MANAGEMENT</option><option value=70>INSTITUTE OF ENGLISH LANGUAGE & LITERATURE</option><option value=28>INSTITUTE OF GENDER STUDIES</option><option value=3>INSTITUTE OF INFORMATION & COMMUNICATION TECHNOLOGY</option><option value=44>INSTITUTE OF LANGUAGES</option><option value=88>INSTITUTE OF LAW</option><option value=9>INSTITUTE OF MATHEMATICS & COMPUTER SCIENCE</option><option value=62>INSTITUTE OF PHARMACY</option><option value=69>INSTITUTE OF PHYSICS</option><option value=68>INSTITUTE OF PLANT SCIENCES</option><option value=32>INTERNATIONAL RELATIONS</option><option value=76>LAW</option><option value=302>LAW (ALLAMA I.I. KAZI CAMPUS)</option><option value=33>LIBRARY INFORMATION SCIENCE & ARCHIVE STUDIES</option><option value=64>MATHEMATICS</option><option value=34>MEDIA & COMMUNICATION STUDIES</option><option value=117>MEDICAL LABORATORY TECHNOLOGY</option><option value=23>MICROBIOLOGY</option><option value=80>MOHTARMA BENAZIR BHUTTO SHAHEED CAMPUS DADU</option><option value=58>MUSLIM HISTORY</option><option value=123>NATIONAL CENTRE OF EXCELLENCE  IN ANALYTICAL CHEMISTRY</option><option value=247>NATIONAL CENTRE OF EXCELLENCE IN ANALYTICAL CHEMISTRY</option><option value=259>NUTRITION & FOOD SCIENCE</option><option value=86>NUTRITION & FOOD TECHNOLOGY</option><option value=66>PAKISTAN STUDIES CENTRE</option><option value=51>PERSIAN</option><option value=233>PHARMACEUTICAL CHEMISTRY</option><option value=229>PHARMACEUTICS</option><option value=231>PHARMACOGNOSY</option><option value=230>PHARMACOLOGY</option><option value=63>PHARMACY</option><option value=232>PHARMACY PRACTICE</option><option value=46>PHILOSOPHY</option><option value=281>PHYSICAL THERAPY</option><option value=24>PHYSICS</option><option value=25>PHYSIOLOGY</option><option value=36>POLITICAL SCIENCE</option><option value=258>POULTRY FARMING AND MANAGEMENT</option><option value=75>PROVINCIAL INSTITUTE OF TEACHERS EDUCATION (PITE) NAWABSHAH</option><option value=240>PSYCHOLOGICAL TESTING AND GUIDANCE AND RESEARCH</option><option value=37>PSYCHOLOGY</option><option value=38>PUBLIC ADMINISTRATION</option><option value=262>PUBLIC HEALTH</option><option value=237>SCIENCE AND TECHNICAL EDUCATION</option><option value=79>SH. PROF.BASHIR AHMED CHANNAR DEPT.OF MICROBIOLOGY</option><option value=16>SINDH DEVELOPMENT STUDIES CENTRE</option><option value=87>SINDH UNIVERSITY CAMPUS BHIT SHAH  IUPSMS</option><option value=85>SINDH UNIVERSITY CAMPUS LARKANA</option><option value=77>SINDH UNIVERSITY CAMPUS MIRPURKHAS</option><option value=84>SINDH UNIVERSITY CAMPUS THATTA</option><option value=72>SINDH UNIVERSITY LAAR CAMPUS @ BADIN</option><option value=47>SINDHI</option><option value=40>SOCIAL WORK</option><option value=39>SOCIOLOGY</option><option value=13>SOFTWARE ENGINEERING</option><option value=252>SOFTWARE ENGINEERING (FET)</option><option value=26>STATISTICS</option><option value=89>SYED ALLAHANDO SHAH CAMPUS NAUSHAHRO FEROZ</option><option value=14>TELECOMMUNICATION</option><option value=253>TELECOMMUNICATION (FET)</option><option value=71>TELEMEDICINE & E-HEALTH</option><option value=48>URDU</option><option value=27>ZOOLOGY</option>
+        </select>
+
+        <label for="exam-year">SELECT EXAM YEAR</label>
+        <select id="exam-year" name="year" required>
+            <option value="">-- Select Year --</option>
+            <option value="2025">2025</option>
+            <option value="2024">2024</option>
+            <option value="2023">2023</option>
+            <option value="2022">2022</option>
+            <option value="2021">2021</option>
+            <option value="2020">2020</option>
+            <option value="2019">2019</option>
+            <option value="2018">2018</option>
+        </select>
+
+        <label for="semester">SELECT SEMESTER</label>
+        <select id="semester" name="semester" required>
+            <option value="">-- Select Semester --</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+        </select>
+
+        <label for="batch">ENTER BATCH</label>
+        <input type="text" id="batch" name="batch" placeholder="Batch (2024) Regular" required>
+
+        <label for="subject">ENTER SUBJECT</label>
+        <input type="text" id="subject" name="subject" placeholder="Political Science (Minor)" required>
+    </div>
+
+    <input type="submit" value="Submit">
+</form>
 
     <table>
         
         {% if students and marks %}
         <table border="1">
             <tr>
-            <th>STUDENT</th>
+            <th>STUDENTS</th>
             <th>MARKS</th>
             </tr>
             {% for i in range(students|length) %}
@@ -80,7 +117,7 @@
                     {{ detail }}<br>
                 {% endfor %}
                 </td>
-                <td>{{ marks[i] }}</td>
+                <td class="marks">{{ marks[i] }}</td>
             </tr>
             {% endfor %}
         </table>

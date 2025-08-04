@@ -101,6 +101,15 @@ form {
   border-radius: 15px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
+select {
+  width: 100%;
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  font-size: 1rem;
+  background-color: white;
+}
 
 form h2 {
   text-align: center;
@@ -166,6 +175,13 @@ table th {
   font-weight: bold;
   text-align: center;
 }
+form h2 {
+  display: block;
+  margin: 0 auto 2rem auto;
+  text-align: center;
+  color: #004080;
+}
+
 
 table tr:nth-child(even) {
   background-color: #f2f2f2;
