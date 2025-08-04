@@ -1,40 +1,128 @@
-body {
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
     font-family: Arial, sans-serif;
     background-color: #f2f2f2;
-    padding: 20px;
     text-align: center;
-}
-
-h2 {
+    line-height: 1.6;
+  }
+  
+  /* === NAVBAR === */
+  nav {
+    width: 100%;
+    height: 60px;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+  }
+  
+  nav .logo {
+width: 240px; 
+   display: flex;
+    align-items: center;
+    margin-top: -6rem;
+    font-weight: bold;
+    color: #03426e;
+  }
+  
+  /* === HEADINGS === */
+  h2 {
     color: #333;
-}
-
-form {
+    margin-top: 10px;
+    margin-left: 10rem;
+  }
+  
+  .Created {
+    color: #03426e;
+    font-size: 20px;
+    margin-top: -8rem;
+  }
+  
+  /* === CONTAINER === */
+  .container {
+    width: 90%;
+    max-width: 900px;
+    margin: 100px auto 40px auto;
+  }
+  
+  /* === CARD === */
+  .card {
     background-color: #fff;
-    padding: 20px;
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.6s ease-in-out;
+  }
+  
+  h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #2c3e50;
+  }
+  
+  .instruction {
+    margin-bottom: 25px;
+    text-align: left;
+  }
+  
+  .instruction h3 {
+    color: #004678;
+    margin-bottom: 8px;
+    font-size: 20px;
+  }
+  
+  .instruction p {
+    font-size: 16px;
+    color: #444;
+  }
+  
+  .instruction a {
+    color: #0077cc;
+    text-decoration: none;
+  }
+  
+  .instruction a:hover {
+    text-decoration: underline;
+  }
+  
+  /* === FORM === */
+  form {
+    background-color: #fff;
+    padding: 28px;
+    padding-top: 30px;
     border-radius: 12px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 60%;
-    margin: 0 auto 40px auto;
-}
+    max-width: 600px;
+    margin: 40px auto;
+    text-align: left;
+  }
 
-label {
+  form label {
     display: block;
-    margin-top: 15px;
-    font-weight: bold;
-    color: #444;
-}
-
-input[type="text"] {
-    width: 80%;
-    padding: 10px;
     margin-top: 5px;
+    font-weight: bold;
+    color: #4d4c4c;
+    font-size: 14px;
+  }
+  
+  form input[type="text"],
+  form input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 15px;
     border: 1px solid #ccc;
     border-radius: 6px;
     font-size: 14px;
-}
-
-input[type="submit"] {
+  }
+  
+  form input[type="submit"] {
     margin-top: 20px;
     padding: 10px 20px;
     background-color: #4CAF50;
@@ -43,42 +131,175 @@ input[type="submit"] {
     border-radius: 6px;
     cursor: pointer;
     font-size: 16px;
-}
-
-input[type="submit"]:hover {
-    background-color: #45a049;
-}
-
-table {
-    width: 80%;
-    margin: 0 auto;
+    width: 34rem;
+  }
+  
+  form input[type="submit"]:hover {
+      background-color: #055e0a;
+    }
+  
+  /* === TABLE === */
+  table {
+    width: 95%;
+    margin: 20px auto;
     border-collapse: collapse;
     background-color: #fff;
-    margin-top: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     overflow: hidden;
-}
-
-th, td {
+  }
+  
+  th, td {
     padding: 12px 15px;
     border-bottom: 1px solid #ddd;
     text-align: center;
     font-size: 16px;
     color: #333;
-}
-
-th {
+  }
+  
+  th {
     background-color: #4CAF50;
     color: white;
     font-weight: bold;
     text-transform: uppercase;
-}
-
-tr:nth-child(even) {
+  }
+  
+  tr:nth-child(even) {
     background-color: #f9f9f9;
+  }
+  
+  tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  /* === FADE ANIMATION === */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  @media (max-width:1000px) {
+    .Created{
+        font-size: 16px;
+        margin-top: -6.5rem;
+        margin-left: 10rem;
+    }
+
+    nav .logo{
+        width: 190px;
+        margin-top: -60px;
+    }
+
+    
+  }
+  /* === MEDIA QUERIES === */
+  @media (max-width: 768px) {
+    nav .logo {
+      padding-left: 10px;
+    }
+    .Created{
+        margin-top: -6rem;
+        margin-left: 10rem;
+        font-size: 13px;
+    }
+  
+    h1 {
+      font-size: 24px;
+    }
+  
+    .instruction h3 {
+      font-size: 18px;
+    }
+  
+    .instruction p {
+      font-size: 15px;
+    }
+    h2{
+        margin-left: 80px;
+    }
+  }
+
+  
+  @media (max-width: 550px) {
+    .card,
+    form {
+      padding: 15px;
+    }
+    .Created{
+        font-size: 12px;
+    }
+  nav .logo{
+    width: 170px;
+    margin-top: -50px;
+    margin-left: -20px;
+  }
+    h1 {
+      font-size: 20px;
+    }
+  
+    .instruction h3 {
+      font-size: 16px;
+    }
+  
+    .instruction p {
+      font-size: 14px;
+    }
+  
+    th, td {
+      font-size: 14px;
+      padding: 10px;
+    }
+    h2{
+        margin-left: 70px;
+    }   
+  
+    nav {
+      height: 50px;
+    }
+  }
+    
+  @media (max-width: 400px) {
+    .card,
+    form {
+      padding: 15px;
+    }
+    .Created{
+        margin-left: 10rem;
+        font-size: 12px;
+        margin-top: -5.5rem;
+    }
+  nav .logo{
+    width: 160px;
+    margin-top: -50px;
+    
+}
+h2{
+    margin-left: 40px;
+}
+h1 {
+    font-size: 20px;
 }
 
-tr:hover {
-    background-color: #f1f1f1;
+.instruction h3 {
+    font-size: 16px;
 }
+  
+    .instruction p {
+      font-size: 14px;
+    }
+  
+    th, td {
+      font-size: 14px;
+      padding: 10px;
+    }
+  
+    nav {
+      height: 50px;
+    }
+  }
+  
