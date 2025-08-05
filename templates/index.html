@@ -3,12 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- Correct CSS reference -->
     <link rel="stylesheet" href="{{ url_for('static', filename='design.css') }}">
-
-    <!-- Correct JS reference -->
     <script src="{{ url_for('static', filename='index.js') }}"></script>
-
     </head>
 <body>
     
@@ -16,6 +12,17 @@
   <div class="nav-row">
     <img src="{{ url_for('static', filename='Images/logo.png') }}" alt="Logo" class="logo">
     <h1 class="Created">Created by Shahzad Nizamani - 2K24/CSM/137</h1>
+    <ul>
+      <li>
+        <a href="https://www.linkedin.com/in/shahzad-nizamani-b9a987247/">LINKEDIN</a>
+      </li>
+      <li>
+        <a href="https://github.com/Shahzad-Nizamani">GITHUB</a>
+      </li>
+      <li>
+        <a href="mailto:nizamanias124@gmail.com">MAIL</a>   
+      </li>
+    </ul>
   </div>
 </nav>
 
@@ -32,18 +39,18 @@
     
           <div class="instruction">
             <h3> Enter Accurate Details</h3>
-            <p>Please make sure to enter the <strong>exact names</strong> of your department, batch, and subject. Incorrect spellings or formatting may lead to no results.</p>
+            <p>Please make sure to enter the <strong>exact names</strong> of your subject. Incorrect spellings or formatting may lead to no results. eg: PROGRAMMING FUNDAMENTALS (LAB), PRE-CALCULUS -II, POLITICAL SCIENCE (MINOR).</p>
           </div>
     
           <div class="instruction">
             <h3> Need Help?</h3>
-            <p>If this is not working for your department, feel free to <a href="mailto:nizamanias124@gmail.com">email me</a> with the details. I’ll assist you in resolving the issue.</p>
+            <p>If this is not working for you, feel free to <a href="mailto:nizamanias124@gmail.com">email me</a> with the details. I’ll assist you in resolving the issue.</p>
           </div>
         </div>
       </div>
 <form method="post" onsubmit="return validateForm()">
 
-    <h2>FIND THE TOPPER</h2>
+    <h2>FIND THE TOPPERS</h2>
     <div class="Inputs">
 
         <label for="dept">SELECT DEPARTMENT</label>
@@ -78,8 +85,37 @@
             <option value="8">8</option>
         </select>
 
-        <label for="batch">ENTER BATCH</label>
-        <input type="text" id="batch" name="batch" placeholder="Batch (2024) Regular" required>
+        <label for="batch">SELECT BATCH</label>
+        <select id="batch" name="batch" required>
+          <option value="">-- Select Batch --</option>
+          <OPtion value="BATCH (2024) REGULAR">BATCH (2024) REGULAR</OPtion>
+          <option value="BATCH (2024) MEDICAL REGULAR">BATCH (2024) MEDICAL REGULAR</option>
+          <option value="BATCH (2024) ENGINEERING REGULAR">BATCH (2024) ENGINEERING REGULAR</option>
+          
+          <OPtion value="BATCH (2023) REGULAR">BATCH (2023) REGULAR</OPtion>
+          <option value="BATCH (2023) MEDICAL REGULAR">BATCH (2023) MEDICAL REGULAR</option>
+          <option value="BATCH (2023) ENGINEERING REGULAR">BATCH (2023) ENGINEERING REGULAR</option>
+          
+          <OPtion value="BATCH (2022) REGULAR">BATCH (2022) REGULAR</OPtion>
+          <option value="BATCH (2022) MEDICAL REGULAR">BATCH (2022) MEDICAL REGULAR</option>
+          <option value="BATCH (2022) ENGINEERING REGULAR">BATCH (2022) ENGINEERING REGULAR</option>
+
+          <OPtion value="BATCH (2021) REGULAR">BATCH (2021) REGULAR</OPtion>
+          <option value="BATCH (2021) MEDICAL REGULAR">BATCH (2021) MEDICAL REGULAR</option>
+          <option value="BATCH (2021) ENGINEERING REGULAR">BATCH (2021) ENGINEERING REGULAR</option>
+
+          <OPtion value="BATCH (2020) REGULAR">BATCH (2020) REGULAR</OPtion>
+          <option value="BATCH (2020) MEDICAL REGULAR">BATCH (2020) MEDICAL REGULAR</option>
+          <option value="BATCH (2020) ENGINEERING REGULAR">BATCH (2020) ENGINEERING REGULAR</option>
+
+          <OPtion value="BATCH (2019) REGULAR">BATCH (2019) REGULAR</OPtion>
+          <option value="BATCH (2019) MEDICAL REGULAR">BATCH (2019) MEDICAL REGULAR</option>
+          <option value="BATCH (2019) ENGINEERING REGULAR">BATCH (2019) ENGINEERING REGULAR</option>
+
+          <OPtion value="BATCH (2018) REGULAR">BATCH (2018) REGULAR</OPtion>
+          <option value="BATCH (2018) MEDICAL REGULAR">BATCH (2018) MEDICAL REGULAR</option>
+          <option value="BATCH (2018) ENGINEERING REGULAR">BATCH (2018) ENGINEERING REGULAR</option>
+        </select>
 
         <label for="subject">ENTER SUBJECT</label>
         <input type="text" id="subject" name="subject" placeholder="Political Science (Minor)" required>
