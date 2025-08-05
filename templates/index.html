@@ -124,6 +124,9 @@
     <input type="submit" value="Submit">
 </form>
 
+{% if sub %}
+<h2 class="makrs_prompt">TOPPERS IN {{sub}}</h2>
+{% endif %}
     <table>
         
         {% if students and marks %}
